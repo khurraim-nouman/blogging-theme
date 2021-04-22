@@ -1,0 +1,39 @@
+#template_shots {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+#template_shots .card {
+    width: 80rem;
+    margin-bottom: 50px;
+    display: block;
+    margin: 30px auto;
+    border: 1px solid #f3f3f3;
+    box-shadow: 5px 5px #f4f4f4;
+}
+
+#template_shots .card  img {
+    height: 250px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px)
+{
+    #template_shots .card {
+        width: 90%;
+        padding: 15px;
+        text-align: center !important;
+    }
+
+    #template_shots .card img {
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    #template_shots .card button {
+        width: 100%;
+    }
+}
+
+

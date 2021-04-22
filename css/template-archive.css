@@ -1,0 +1,29 @@
+#template_archve {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+#template_archive .card {
+    width: 80rem;
+    margin-bottom: 50px;
+    display: block;
+    margin: 30px auto;
+    border: 1px solid #f3f3f3;
+    box-shadow: 5px 5px #f4f4f4;
+}
+
+#template_archive .card  img {
+    height: 250px;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 600px)
+{
+    #template_archive .card {
+        width: 90%;
+        padding: 15px;
+    }
+}
+

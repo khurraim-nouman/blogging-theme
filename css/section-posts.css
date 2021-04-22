@@ -1,0 +1,81 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+#recentPosts {
+    width: 100%;
+    height: 75vh;
+    overflow-x: hidden;
+}
+
+#recentPosts h1 {
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+#recentPosts a {
+    color: #333;
+}
+
+#recentPosts .card {
+    margin-bottom: 50px !important;
+}
+
+#recentPosts .card h4 {
+    font-weight: 500;
+    margin: 0 !important;
+    padding: 0  !important;
+    font-size: 20px;
+}
+
+#recentPosts .card h4,
+#recentPosts .card p {
+    font-family: 'Dosis', sans-serif;
+}
+
+#recentPosts .card p {
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    #recentPosts {
+        height: auto;
+    }
+
+    #recentPosts h1 {
+        text-align: center;
+    }
+
+
+    #recentPosts .card {
+        border: 1px solid #f3f3f3;
+        box-shadow: 3px 3px #f4f4f4;
+        width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #recentPosts .card h4 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    #recentPosts .card p {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    #recentPosts .card .wp-post-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+    }
+}
