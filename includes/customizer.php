@@ -246,6 +246,19 @@ function wpb_customize_register($wp_customize)
         'settings' => 'header_image',
         'priority' => 1
     )));
+
+    // Setting and Control For Navbar Image
+    $wp_customize -> add_setting('navbar_image', array(
+        'default' => get_bloginfo('template_directory').'/images/site-logo.png',
+        'type' => 'theme_mod'
+    ));
+
+    $wp_customize -> add_control(new WP_Customize_Image_Control($wp_customize, 'navbar_image', array(
+        'label' => __('Navbar Image', 'Mughal Blogs'),
+        'section' => 'navbar',
+        'settings' => 'navbar_image',
+        'priority' => 1
+    )));
 }
 
 add_action('customize_register', 'wpb_customize_register');

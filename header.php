@@ -26,7 +26,9 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
 
-	<a class="navbar-brand" href="#">Navbar</a>
+	<a class="navbar-brand" href="#">
+    <img class='img-fluid' src="<?php echo get_theme_mod('navbar_image', get_bloginfo('template_directory').'/images/site-logo.png') ?>" alt="">
+  </a>
         <?php
         wp_nav_menu( array(
             'theme_location'    => 'primary',
