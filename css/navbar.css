@@ -7,6 +7,8 @@ html,body {
     box-sizing: border-box;
 }
 
+/*
+
 .blog-nav {
     background: #f3f3f3;
     font-family: 'Dosis', sans-serif;
@@ -60,4 +62,21 @@ html,body {
     #menu-main-menu li {
         margin: 25px auto;
     }
+}
+
+
+
+*/
+
+
+nav {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+}
+
+.site-logo {
+    width: 300px;
+    height: 100px;
+    display: block;
+    margin: 20px auto;
 }

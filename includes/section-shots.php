@@ -24,11 +24,14 @@
 
 ?>
 
-    <div class='row'>
-
-    <h4>
+<h4>
         <?php echo get_theme_mod('shots_subheading', 'Our Awesome Shots'); ?>
     </h4>
+
+    <div class='row'>
+
+    
+
 
     <?php
 

@@ -11,6 +11,10 @@
     overflow-x: hidden;
 }
 
+#testimonial .card {
+    background: none;
+    border: none;
+}
 
 #testimonial h4 {
     text-transform: uppercase;

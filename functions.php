@@ -1,5 +1,23 @@
 <?php
 
+  /**
+ * Register Custom Navigation Walker
+ */
+  function register_navwalker(){
+	  require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+  }
+
+  add_action( 'after_setup_theme', 'register_navwalker' );
+
+  if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
+    // File does not exist... return an error.
+    return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+} else {
+    // File exists... require it.
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+
+
    // Theme Support
   function wpb_theme_setup(){
 
@@ -8,7 +26,7 @@
 
     // Nav Menus
     register_nav_menus(array(
-      'primary' => __('Primary Menu')
+      'primary' => __('Primary Menu', 'Mughal Blogs')
     ));
 
     
@@ -22,7 +40,7 @@
   function themebs_enqueue_styles() {
 
     // Integrating Bootstrap In Theme 
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css' );
+    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 
     // Styling For Navbar
     wp_enqueue_style( 'navbar', get_template_directory_uri() . '/css/navbar.css' );
@@ -45,8 +63,8 @@
     // Template Archive Shots
     wp_enqueue_style( 'template-shots', get_template_directory_uri() . '/css/template-shots.css' );
 
-        // Template Archive Testimonials
-        wp_enqueue_style( 'template-testimonials', get_template_directory_uri() . '/css/template-testimonials.css' );
+    // Template Archive Testimonials
+    wp_enqueue_style( 'template-testimonials', get_template_directory_uri() . '/css/template-testimonials.css' );
 
     // Styling For Footer
     wp_enqueue_style( 'footer', get_template_directory_uri() . '/css/footer.css' );

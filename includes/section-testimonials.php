@@ -2,21 +2,18 @@
 <section id='testimonial'>
     <div class="container" id='slide'>
 
-<?php
-
- $testimonialsQuery = new WP_Query(array(
-     'posts_per_page' => 1,
-     'post_type' => 'testimonials',
-     'orderby' => 'post_date',
-     'order' => 'ASC'
- ));
-
- ?>
 
  <h4 class='text-center pt-5 mb-5'>-What Our Customers Think-</h4>
         
 
   <?php
+
+$testimonialsQuery = new WP_Query(array(
+    'posts_per_page' => 1,
+    'post_type' => 'testimonials',
+    'orderby' => 'post_date',
+    'order' => 'ASC'
+)); 
 
  while ($testimonialsQuery -> have_posts()) {
      $testimonialsQuery -> the_post();

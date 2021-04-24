@@ -20,7 +20,7 @@
 
 #showcase .centered {
     position: absolute;
-    top: 45%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #333;
@@ -44,4 +44,29 @@
     font-size: 25px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #showcase .centered {
+        top: 40%;
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+
+    #showcase .centered-second {
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #showcase .centered {
+        top: 40%;
+    }
+
+    #showcase .centered-second {
+        top: 60%;
+    }
 }

@@ -33,7 +33,7 @@
            <!-- Row Starts From Here -->                    
            <div class="row">
             <div class="col-sm-4 col-md-4 col-12">
-                <?php the_post_thumbnail('small'); ?>
+                <?php the_post_thumbnail(); ?>
             </div>
 
             <div class="col-sm-8 col-md-8 col-12">

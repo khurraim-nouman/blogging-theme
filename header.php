@@ -19,18 +19,31 @@
 
 
 
-              <img src="https://images.vexels.com/media/users/3/137692/isolated/preview/e425fa1fe274a2267405829771f13a13-simple-logo-geometric-polygonal-by-vexels.png"
+<img src="<?php echo get_theme_mod('header_image', get_bloginfo('template_directory').'/images/site-logo.png'); ?> ?>"
                alt="The Site Logo" class='site-logo img-fluid'>
-   
-        <nav class="blog-nav">
 
-          <?php
-           wp_nav_menu( array(
-               'menu'              => 'primary',
-               'theme_location'    => 'primary',
-               'depth'             => 2,
-             
-           ) );
-       ?>
-        </nav>
+               <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
 
+	<a class="navbar-brand" href="#">Navbar</a>
+        <?php
+        wp_nav_menu( array(
+            'theme_location'    => 'primary',
+            'depth'             => 2,
+            'container'         => 'div',
+            'container_class'   => 'collapse navbar-collapse',
+            'container_id'      => 'bs-example-navbar-collapse-1',
+            'menu_class'        => 'nav navbar-nav mx-auto',
+            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'            => new WP_Bootstrap_Navwalker()
+		) );
+        ?>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+  
+  
+    </div>
+</nav>

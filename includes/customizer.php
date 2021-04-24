@@ -218,6 +218,34 @@ function wpb_customize_register($wp_customize)
         'section' => 'footer',
         'priority' => 2
     ));
+
+
+
+    /*
+     *
+     *      NAVBAR HEADER SECTION 
+     * 
+     */
+
+         // Section For Showcase Section (Image With two Text Lines)
+    $wp_customize -> add_section('navbar', array(
+        'title' => __('Navbar', 'Mughal Blogs'),
+        'description' => sprintf(__('Options For Navbar', 'FrontPage')),
+        'priority' => 130
+    ));
+
+    // Setting and Control For Image
+    $wp_customize -> add_setting('header_image', array(
+        'default' => get_bloginfo('template_directory').'/images/site-logo.png',
+        'type' => 'theme_mod'
+    ));
+
+    $wp_customize -> add_control(new WP_Customize_Image_Control($wp_customize, 'header_image', array(
+        'label' => __('Header Image', 'Mughal Blogs'),
+        'section' => 'navbar',
+        'settings' => 'header_image',
+        'priority' => 1
+    )));
 }
 
 add_action('customize_register', 'wpb_customize_register');
