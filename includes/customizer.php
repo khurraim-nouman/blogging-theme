@@ -259,6 +259,33 @@ function wpb_customize_register($wp_customize)
         'settings' => 'navbar_image',
         'priority' => 1
     )));
+
+
+    /*
+     *      TESTIMONIAL CUSTOMZIER SETTING (BACKGROUND IMAGE CHANGE)
+     * 
+     */
+
+    $wp_customize -> add_section('testimonial', array(
+        'title' => __('Testimonial', 'Mughal Blogs'),
+        'description' => sprintf(__('Change Testimonial Section Background', 'FrontPage')),
+        'priority' => 130
+    ));
+
+    // Setting and Control For Navbar Image
+    $wp_customize -> add_setting('testimonial_image', array(
+        'default' => get_bloginfo('template_directory').'/images/background.jpg',
+        'type' => 'theme_mod'
+    ));
+
+    $wp_customize -> add_control(new WP_Customize_Image_Control($wp_customize, 'testimonial_image', array(
+        'label' => __('Testimonail Image Image', 'Mughal Blogs'),
+        'section' => 'testimonial',
+        'settings' => 'testimonial_image',
+        'priority' => 1
+    )));
+
+
 }
 
 add_action('customize_register', 'wpb_customize_register');
